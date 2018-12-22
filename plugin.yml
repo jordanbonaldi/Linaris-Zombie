@@ -1,0 +1,9 @@
+name: Survivor
+version: 0.1
+main: net.neferett.Survivor.Survivor
+author: Skelerex
+depend: [BukkitAPI, GameAPI, BossBarAPI]
+commands:
+  survivor:
+    usage: /<command> <args>
+    description: Survivor settings

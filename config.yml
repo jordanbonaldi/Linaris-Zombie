@@ -1,0 +1,15 @@
+lobby-time: 30
+preparation-time: 30
+player-max: 10
+player-min: 4
+last-round: 30
+enable-bungeecord: true
+bungeecord-lobby: lobby
+start-money: 1000
+money-by-round: 100
+money-by-kill: 10
+hurt-time-to-death: 15
+cure-time: 5
+fence-time: 5
+fence-price: 2
+config-mode: true
