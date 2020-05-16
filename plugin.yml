@@ -1,7 +1,7 @@
 name: Survivor
 version: 0.1
 main: net.neferett.Survivor.Survivor
-author: Skelerex
+author: Neferett
 depend: [BukkitAPI, GameAPI, BossBarAPI]
 commands:
   survivor:

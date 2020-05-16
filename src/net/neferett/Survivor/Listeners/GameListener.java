@@ -35,9 +35,9 @@ import org.bukkit.event.player.PlayerPickupItemEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 
-import fr.icrotz.gameserver.api.PlayerLocal;
-import fr.icrotz.gameserver.api.PlayerLocalManager;
-import fr.icrotz.gameserver.events.ReturnToLobbyEvent;
+import net.neferett.linaris.api.PlayerLocal;
+import net.neferett.linaris.api.PlayerLocalManager;
+import net.neferett.linaris.events.ReturnToLobbyEvent;
 import net.neferett.Survivor.BonusType;
 import net.neferett.Survivor.DropType;
 import net.neferett.Survivor.Survivor;
@@ -67,11 +67,11 @@ public class GameListener
 		 Player player = e.getTarget();
 		 if (Survivor.getGameState() == GameState.LOBBY) return;
 		 PlayerLocal pl = PlayerLocalManager.get().getPlayerLocal(player.getName());
-		 player.sendMessage("§6-----------------------------------------------------");
-		 player.sendMessage("§6Fin de partie sur §b" + Bukkit.getServerName());
-		 player.sendMessage("§7Gain total de §eCoins §7sur la partie : §e" + String.format("%.2f", pl.getGainedEC()));
-		 player.sendMessage("§7Gain total de §bCrédits §7sur la partie : §e" + String.format("%.2f", pl.getGainedLC()));
-		 player.sendMessage("§6-----------------------------------------------------");
+		 player.sendMessage("ï¿½6-----------------------------------------------------");
+		 player.sendMessage("ï¿½6Fin de partie sur ï¿½b" + Bukkit.getServerName());
+		 player.sendMessage("ï¿½7Gain total de ï¿½eCoins ï¿½7sur la partie : ï¿½e" + String.format("%.2f", pl.getGainedEC()));
+		 player.sendMessage("ï¿½7Gain total de ï¿½bCrï¿½dits ï¿½7sur la partie : ï¿½e" + String.format("%.2f", pl.getGainedLC()));
+		 player.sendMessage("ï¿½6-----------------------------------------------------");
 	}
 	
 	
@@ -322,11 +322,11 @@ public class GameListener
           if (gun.getLevel() <= gun.getGun().getMaxLevel() - 1) {
             int level = gun.getLevel() + 1;
             GunWeaponTmpl.GunLevel gunLevel = gun.getGun().getGunLevel(level);
-            Utils.sendActionBar(player, "§2Améliorez votre " + gun.getGun().getName() + " §2au niveau §a" + level + " §2pour §e" + gunLevel.getPrice() + "§3$");
+            Utils.sendActionBar(player, "ï¿½2Amï¿½liorez votre " + gun.getGun().getName() + " ï¿½2au niveau ï¿½a" + level + " ï¿½2pour ï¿½e" + gunLevel.getPrice() + "ï¿½3$");
           }
         }
         else if (target.getType() == Material.ENDER_CHEST) {
-          Utils.sendActionBar(player, "§2Achetez une arme aléatoire pour §e250§3$");
+          Utils.sendActionBar(player, "ï¿½2Achetez une arme alï¿½atoire pour ï¿½e250ï¿½3$");
         }
       }
     } catch (Exception localException) {
@@ -370,12 +370,12 @@ public class GameListener
           WeaponTmpl weapon = WeaponsManager.getInstance().getWeapon(frame.getItem().getType());
           if (weapon != null) {
             StringBuilder show = new StringBuilder();
-            show.append("§r§6").append(weapon.getName()).append(" - §e");
-            show.append(weapon.getPrice()).append("§b$");
+            show.append("ï¿½rï¿½6").append(weapon.getName()).append(" - ï¿½e");
+            show.append(weapon.getPrice()).append("ï¿½b$");
             if ((weapon instanceof GunWeaponTmpl)) {
               GunWeaponTmpl.GunLevel level = ((GunWeaponTmpl)weapon).getGunLevel(1);
-              show.append("§r : §6Munitions: §e").append(weapon.getPrice() / 2).append("§b$");
-              show.append("§r : §4Dégâts: §c").append(level.getMinDamage()).append("§1/§c").append(level.getMaxDamage());
+              show.append("ï¿½r : ï¿½6Munitions: ï¿½e").append(weapon.getPrice() / 2).append("ï¿½b$");
+              show.append("ï¿½r : ï¿½4Dï¿½gï¿½ts: ï¿½c").append(level.getMinDamage()).append("ï¿½1/ï¿½c").append(level.getMaxDamage());
             }
 
             Utils.sendActionBar(player, show.toString());
@@ -384,8 +384,8 @@ public class GameListener
           MapManager.MapPart part = MapManager.getInstance().getPartByBuyEntity(entity.getUniqueId());
           if (part != null) {
             StringBuilder show = new StringBuilder();
-            show.append("§r§bPrix de §e").append(part.getName()).append(" §b: §e");
-            show.append(MapManager.getInstance().getNextPrice()).append("§b$");
+            show.append("ï¿½rï¿½bPrix de ï¿½e").append(part.getName()).append(" ï¿½b: ï¿½e");
+            show.append(MapManager.getInstance().getNextPrice()).append("ï¿½b$");
             Utils.sendActionBar(player, show.toString());
           }
         }

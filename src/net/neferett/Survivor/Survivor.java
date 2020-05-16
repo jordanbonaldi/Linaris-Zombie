@@ -1,16 +1,18 @@
 
 package net.neferett.Survivor;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.bukkit.Bukkit;
-import org.bukkit.Difficulty;
-import org.bukkit.GameMode;
-import org.bukkit.Sound;
-import org.bukkit.World;
-import org.bukkit.WorldCreator;
+import net.neferett.Survivor.Commands.CommandSurvivor;
+import net.neferett.Survivor.Listeners.*;
+import net.neferett.Survivor.Managers.MapManager;
+import net.neferett.Survivor.Managers.PlScoreboardManager;
+import net.neferett.Survivor.Managers.PlayersManager;
+import net.neferett.Survivor.Managers.SubObjects.PlPlayer;
+import net.neferett.Survivor.Timers.GameTimer;
+import net.neferett.Survivor.Utils.*;
+import net.neferett.linaris.BukkitAPI;
+import net.neferett.linaris.api.PlayerData;
+import net.neferett.linaris.api.ServerInfo;
+import org.bukkit.*;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
@@ -20,31 +22,9 @@ import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
-import fr.icrotz.gameapi.utils.PlayerUtils;
-import fr.icrotz.gameserver.BukkitAPI;
-import fr.icrotz.gameserver.api.PlayerData;
-import fr.icrotz.gameserver.api.ServerInfo;
-import net.neferett.Survivor.Commands.CommandSurvivor;
-import net.neferett.Survivor.Listeners.ChatListener;
-import net.neferett.Survivor.Listeners.DieAndHurtListener;
-import net.neferett.Survivor.Listeners.GameListener;
-import net.neferett.Survivor.Listeners.GlobalListener;
-import net.neferett.Survivor.Listeners.LobbyListener;
-import net.neferett.Survivor.Listeners.WeaponsListener;
-import net.neferett.Survivor.Listeners.WorldListener;
-import net.neferett.Survivor.Managers.MapManager;
-import net.neferett.Survivor.Managers.PlScoreboardManager;
-import net.neferett.Survivor.Managers.PlayersManager;
-import net.neferett.Survivor.Managers.SubObjects.PlPlayer;
-import net.neferett.Survivor.Timers.GameTimer;
-import net.neferett.Survivor.Utils.ConfigHelper;
-import net.neferett.Survivor.Utils.Data;
-import net.neferett.Survivor.Utils.FileUtils;
-import net.neferett.Survivor.Utils.Lang;
-import net.neferett.Survivor.Utils.Utils;
+import java.io.File;
 
 public class Survivor
 extends JavaPlugin {
@@ -134,7 +114,7 @@ extends JavaPlugin {
             Bukkit.broadcastMessage((String)Lang.get("START_GAME"));
         } else if (this.m_gameState == GameState.RESTART) {
             for (Player player : Bukkit.getOnlinePlayers()) {
-            	fr.icrotz.gameserver.utils.PlayerUtils.returnToHub(player);
+            	net.neferett.linaris.utils.PlayerUtils.returnToHub(player);
             }
         }
     }

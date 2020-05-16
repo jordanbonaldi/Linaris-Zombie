@@ -20,6 +20,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.UUID;
 
+import net.neferett.linaris.BukkitAPI;
+import net.neferett.linaris.api.PlayerData;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -36,9 +38,6 @@ import org.bukkit.entity.Zombie;
 import org.bukkit.inventory.EntityEquipment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
-
-import fr.icrotz.gameserver.BukkitAPI;
-import fr.icrotz.gameserver.api.PlayerData;
 
 public class GameTimer {
     private int m_round = 0;
@@ -233,7 +232,7 @@ public class GameTimer {
     	for(Player p : Bukkit.getOnlinePlayers()){
           	BukkitAPI.get().getTasksManager().addTask(() -> {
 				PlayerData data = BukkitAPI.get().getPlayerDataManager().getPlayerData(p.getName());
-				data.creditCoins(0.5, "Round terminé", true, null);
+				data.creditCoins(0.5, "Round terminï¿½", true, null);
 			}); 
     	}
         Bukkit.broadcastMessage((String)Lang.get("END_ROUND").replaceAll("<round>", Integer.toString(this.m_round)));

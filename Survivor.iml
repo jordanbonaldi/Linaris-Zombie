@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager">
+    <libelement value="file://C:/Users/Neferett/LB/BossBarAPI_v1.0.6.jar" />
+    <libelement value="file://C:/Users/Neferett/LB/GameAPI.jar" />
+    <libelement value="file://C:/Users/Neferett/LB/ProtocolLib.jar" />
+    <libelement value="file://C:/Users/Neferett/LB/spigot.jar" />
+    <libelement value="file://C:/Users/Neferett/Desktop/workspace/Bukkit/target/linaris-gameserver.jar" />
+    <src_description expected_position="0">
+      <src_folder value="file://$MODULE_DIR$/src" expected_position="0" />
+    </src_description>
+  </component>
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/bin" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="jdk" jdkName="13" jdkType="JavaSDK" />
+    <orderEntry type="module-library">
+      <library name="BossBarAPI_v1.0.6.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Downloads/BossBarAPI_v1.0.6.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="GameAPI.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../Linaris-GameAPI/classes/artifacts/GameAPI_jar/GameAPI.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../Linaris-GameAPI/classes/artifacts/GameAPI_jar/GameAPI.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="ProtocolLib.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../Linaris-API/lib/ProtocolLib.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="spigot.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../Linaris-API/lib/spigot-1.8.8-R0.1-SNAPSHOT-latest.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../Linaris-API/lib/spigot-1.8.8-R0.1-SNAPSHOT-latest.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="linaris-gameserver.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../Linaris-API/target/linaris-gameserver.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>

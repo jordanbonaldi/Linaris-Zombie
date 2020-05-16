@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Survivor:jar">
+    <output-path>$PROJECT_DIR$/classes/artifacts/Survivor_jar</output-path>
+    <root id="archive" name="Survivor.jar">
+      <element id="module-output" name="Survivor" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../Linaris-API/lib/ProtocolLib.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../Linaris-API/lib/spigot-1.8.8-R0.1-SNAPSHOT-latest.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../Linaris-GameAPI/classes/artifacts/GameAPI_jar/GameAPI.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/BossBarAPI_v1.0.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../Linaris-API/target/linaris-gameserver.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
